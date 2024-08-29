@@ -3,7 +3,7 @@ from telebot import types
 from database import save_letter
 from export_to_excel import export_letters_to_excel 
 
-API_TOKEN = '7378588994:AAE_3YSAF5xxNGNqehL-W__fiLxJAajLK1o'  # Замените на токен вашего бота 
+API_TOKEN = '7378588994:AAE_3YSAF5xxNGNqehL-W__fiLxJAajLK1o'  
 
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -45,7 +45,7 @@ def process_letter_step(message):
     cancel_button = types.KeyboardButton("Отмена") 
     keyboard.add(save_button, cancel_button) 
 
-    # Форматирование сообщения с пробелами и переносами
+
     formatted_message = (
         "Ваши данные:\nФИО: {name}\nПисьмо: {letter}\nВыберите действие:"
     ).format(name=name, letter=letter)
